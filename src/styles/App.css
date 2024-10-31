@@ -1,0 +1,485 @@
+/* App.css */
+.app {
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .hero {
+    position: relative;
+    height: 600px;
+    background: linear-gradient(to right, #2563eb, #7c3aed);
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    max-width: 42rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Stats Section */
+  .stats {
+    background-color: white;
+    padding: 2rem 0;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .stats-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-item p {
+    color: #6b7280;
+  }
+  
+  .features {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+  }
+  
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .features-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .feature-icon {
+    background-color: #dbeafe;
+    padding: 1rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: #2563eb;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .feature-item p {
+    color: #6b7280;
+  }
+  
+  /* Popular Cities */
+  .cities {
+    padding: 4rem 0;
+    background-color: white;
+  }
+  
+  .cities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .cities-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    .cities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .cities-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .city-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+  
+  .city-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .city-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .city-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+  }
+  
+  .city-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .city-info p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+  
+  .properties {
+    padding: 4rem 0;
+  }
+  
+  .properties-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .properties-container h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+  
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .properties-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .properties-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* How It Works */
+  .how-it-works {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+  }
+  
+  .how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .step-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #2563eb;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .step-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+  
+  .step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .step p {
+    color: #6b7280;
+  }
+  
+  /* Why Choose Us */
+  .why-choose-us {
+    padding: 4rem 0;
+    background-color: white;
+  }
+  
+  .why-choose-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .why-choose-us h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .benefits-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .benefit {
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .benefit:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .benefit-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .benefit p {
+    color: #6b7280;
+  }
+  
+  /* Newsletter */
+  .newsletter {
+    padding: 4rem 0;
+    background-color: #f9fafb;
+  }
+  
+  .newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .newsletter h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter-form {
+    max-width: 32rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 640px) {
+    .newsletter-form {
+      flex-direction: row;
+    }
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .newsletter-form input:focus {
+    border-color: #2563eb;
+  }
+  
+  .newsletter-form button {
+    padding: 0.75rem 2rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .cta {
+    background-color: #111827;
+    color: white;
+    padding: 4rem 0;
+  }
+  
+  .cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    color: #d1d5db;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #1d4ed8;
+  }
